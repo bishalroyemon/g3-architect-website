@@ -122,6 +122,7 @@ main >section{
 
 .features{
   gap: 100px;
+  
 }
 
 
@@ -129,6 +130,7 @@ main >section{
   border-left:5px solid #FF900E ;
   padding-left: 21px;
 }
+
 
 .feature-card{
   padding:15px 20px 15px 20px;
@@ -145,19 +147,35 @@ main >section{
 
 }
   
+.experience-year{
+  font-size: 4rem;
+  font-weight: 700;
+}
 
+.experience{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
 
+#experience-badge{
+  margin-left: -70px;
+  margin-top: -100px;
+}
+/* .feature-architect img{  */
+  width: 100%;
+}
 
-
-
-/* some facts related card */
+/* some facts related style*/
 .facts-container{
   display: grid;
   grid-template-columns: repeat(4,1fr);
 }
-
+.facts-container{
+gap: 120px;
+}
 
 .fact-card{
+ display: flex;
   border: 1px solid #FF900E;
   width: 240px;
   height:240px;
@@ -165,6 +183,7 @@ main >section{
   text-align: center;
   justify-content: center;
   align-items: center;
+  
 }
 
 .fact-number{
@@ -182,6 +201,8 @@ main >section{
 .fact-description{
   max-width: 540px;
 }
+
+
 
 /* sponsors rtelated style */
 .sponsor-info{
@@ -202,13 +223,15 @@ filter: grayscale(100%);
 
 
 
+
 /* .responsive media query */
  @media screen and (max-width:576px) {  
    .navbar, 
    .nav-links ,
-   .teams
+   .teams ,
+   .features
    
-   { 
+   {
     flex-direction: column;
   }
   .team-img-container , 
@@ -219,11 +242,15 @@ filter: grayscale(100%);
     grid-template-columns: repeat(1,1fr);
 
   }
+#experience-badge{ 
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
-  .facts-container{
-   justify-items: center;
-   gap: 24px;
-  }
+.facts-container{
+  grid-template-columns: repeat(2,1fr);
+}
+  
   .sponsor-companies{
   justify-items: center;
   gap: 40px;
@@ -232,13 +259,17 @@ filter: grayscale(100%);
   .our-features{
     margin: 20px;
   }
+.feature-architect img{ 
+  width: 100%;
+}
+
 
 }
 
 /* medium size device */
 
 @media screen and (min-width:576px) and (max-width:992px) {
-  .teams{
+  .teams   {
     flex-direction: column;
   }
   .our-features{
@@ -249,10 +280,10 @@ filter: grayscale(100%);
   grid-template-columns: repeat(3,1fr);
   gap: 40px;
 }
- .facts-container{
-  grid-template-columns: repeat(2,1fr);
- }
 
+.facts-container{
+  grid-template-columns: repeat(2,1fr);
+}
 
 }
  
